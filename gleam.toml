@@ -1,0 +1,22 @@
+name = "gemo"
+version = "1.0.0"
+
+# Fill out these fields if you intend to generate HTML documentation or publish
+# your project to the Hex package manager.
+#
+description = "Simple and memory efficient memoization for JavaScript and Erlang."
+licences = ["MIT"]
+repository = { type = "github", user = "lv37", repo = "gemo" }
+# links = [{ title = "Website", href = "https://gleam.run" }]
+#
+# For a full reference of all the available options, you can have a look at
+# https://gleam.run/writing-gleam/gleam-toml/.
+
+[dependencies]
+gleam_stdlib = ">= 0.34.0 and < 2.0.0"
+lamb = ">= 0.6.1 and < 1.0.0"
+mumu = ">= 1.0.3 and < 2.0.0"
+
+[dev-dependencies]
+gleeunit = ">= 1.0.0 and < 2.0.0"
+gtempo = ">= 5.1.2 and < 6.0.0"

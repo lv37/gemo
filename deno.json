@@ -1,0 +1,13 @@
+{
+	"compilerOptions": {
+		"types": ["npm:@types/node"]
+	},
+	"fmt": {
+		"include": [],
+		"exclude": ["*", "*/**"]
+	},
+	"lint": {
+		"include": [],
+		"exclude": ["*", "*/**"]
+	}
+}
