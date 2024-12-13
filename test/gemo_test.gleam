@@ -1,6 +1,6 @@
-import gleam/string
 import gemo
 import gleam/bool
+import gleam/string
 import gleeunit
 import gleeunit/should
 import tempo/duration
