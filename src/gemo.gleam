@@ -87,6 +87,7 @@ pub fn memoize0(func: fn() -> a, cb: fn() -> a) -> a {
 pub fn memoize1(func: fn(b) -> a, arg1: b, cb: fn() -> a) -> a {
   do_memoize(func, #(arg1), cb)
 }
+
 /// Same as memoize1 but with 2 args.
 pub fn memoize2(func: fn() -> a, arg1: b, arg2: c, cb: fn() -> a) -> a {
   do_memoize(func, #(arg1, arg2), cb)
