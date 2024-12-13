@@ -89,18 +89,24 @@ pub fn memoize1(func: fn(b) -> a, arg1: b, cb: fn() -> a) -> a {
 }
 
 /// Same as memoize1 but with 2 args.
-pub fn memoize2(func: fn() -> a, arg1: b, arg2: c, cb: fn() -> a) -> a {
+pub fn memoize2(func: fn(b, c) -> a, arg1: b, arg2: c, cb: fn() -> a) -> a {
   do_memoize(func, #(arg1, arg2), cb)
 }
 
 /// Same as memoize1 but with 3 args.
-pub fn memoize3(func: fn() -> a, arg1: b, arg2: c, arg3: d, cb: fn() -> a) -> a {
+pub fn memoize3(
+  func: fn(b, c, d) -> a,
+  arg1: b,
+  arg2: c,
+  arg3: d,
+  cb: fn() -> a,
+) -> a {
   do_memoize(func, #(arg1, arg2, arg3), cb)
 }
 
 /// Same as memoize1 but with 4 args.
 pub fn memoize4(
-  func: fn() -> a,
+  func: fn(b, c, d, e) -> a,
   arg1: b,
   arg2: c,
   arg3: d,
@@ -112,7 +118,7 @@ pub fn memoize4(
 
 /// Same as memoize1 but with 5 args.
 pub fn memoize5(
-  func: fn() -> a,
+  func: fn(b, c, d, e, f) -> a,
   arg1: b,
   arg2: c,
   arg3: d,
@@ -125,7 +131,7 @@ pub fn memoize5(
 
 /// Same as memoize1 but with 6 args.
 pub fn memoize6(
-  func: fn() -> a,
+  func: fn(b, c, d, e, f, g) -> a,
   arg1: b,
   arg2: c,
   arg3: d,
@@ -139,7 +145,7 @@ pub fn memoize6(
 
 /// Same as memoize1 but with 7 args.
 pub fn memoize7(
-  func: fn() -> a,
+  func: fn(b, c, d, e, f, g, h) -> a,
   arg1: b,
   arg2: c,
   arg3: d,
@@ -154,7 +160,7 @@ pub fn memoize7(
 
 /// Same as memoize1 but with 8 args.
 pub fn memoize8(
-  func: fn() -> a,
+  func: fn(b, c, d, e, f, g, h, i) -> a,
   arg1: b,
   arg2: c,
   arg3: d,
@@ -170,7 +176,7 @@ pub fn memoize8(
 
 /// Same as memoize1 but with 9 args.
 pub fn memoize9(
-  func: fn() -> a,
+  func: fn(b, c, d, e, f, g, h, i, j) -> a,
   arg1: b,
   arg2: c,
   arg3: d,
@@ -187,7 +193,7 @@ pub fn memoize9(
 
 /// Same as memoize1 but with 10 args.
 pub fn memoize10(
-  key: fn() -> a,
+  func: fn(b, c, d, e, f, g, h, i, j, k) -> a,
   arg1: b,
   arg2: c,
   arg3: d,
@@ -201,7 +207,7 @@ pub fn memoize10(
   cb: fn() -> a,
 ) -> a {
   do_memoize(
-    key,
+    func,
     #(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10),
     cb,
   )
